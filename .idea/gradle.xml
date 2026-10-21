@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/lab2" />
+            <option value="$PROJECT_DIR$/app/lab4" />
+            <option value="$PROJECT_DIR$/app/lab4-exercitiu" />
           </set>
         </option>
       </GradleProjectSettings>
