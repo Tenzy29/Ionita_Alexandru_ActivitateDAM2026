@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PreluareDate">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduceti_datele_pentru_autoturism"
+        android:textSize="25sp" />
+
+
+
+    <!--    private String denumire;-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/denumire" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+
+    <!--    private String model;-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/model" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--    private int anFabricate;-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anfabricatie" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!--    private int capacitateMotor;-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capacitatemotor" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--    private int nrUsi;-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nrusi" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salveaza"/>
+
+</LinearLayout>

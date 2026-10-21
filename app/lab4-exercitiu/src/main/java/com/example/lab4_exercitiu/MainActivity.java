@@ -1,6 +1,8 @@
 package com.example.lab4_exercitiu;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void deschideActivitatePreluareDate(View view)
+    {
+        Intent it = new Intent(this,PreluareDate.class);
+        startActivityForResult(it,70);
+    }
+
 }

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lab4-Exercitiu</string>
+    <string name="introdudate">IntroduDate</string>
+    <string name="introduceti_datele_pentru_autoturism">Introduceti datele pentru Autoturism!</string>
+    <string name="denumire">Denumire:</string>
+    <string name="model">Model:</string>
+    <string name="anfabricatie">anFabricatie:</string>
+    <string name="capacitatemotor">capacitateMotor:</string>
+    <string name="nrusi">nrUsi:</string>
+    <string name="salveaza">Salveaza!</string>
 </resources>
