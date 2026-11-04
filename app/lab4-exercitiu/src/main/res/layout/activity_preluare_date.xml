@@ -6,67 +6,148 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".PreluareDate">
+
+<!--    titleanovici-->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/introduceti_datele_pentru_autoturism"
         android:textSize="25sp" />
 
 
 
     <!--    private String denumire;-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/denumire" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/denumire" />
+        <EditText
+            android:id="@+id/etDenumire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </LinearLayout>
 
 
     <!--    private String model;-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/model" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/model" />
+        <EditText
+            android:id="@+id/etModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
     <!--    private int anFabricate;-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anfabricatie" />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/etAnFabricate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <!--     private boolean transmisieAutomata; -->
+    <Switch
+        android:id="@+id/switchTransmisie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Transmisie Automată"
+        android:textSize="16sp" />
+
+<!--    private String tractiune;-->
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tracțiune:"
+        android:textStyle="bold" />
+    <RadioGroup
+        android:id="@+id/radioGroupTractiune"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <RadioButton
+            android:id="@+id/radioFata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Față"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/radioSpate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Spate" />
+        <RadioButton
+            android:id="@+id/radioIntegrala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="4x4" />
+    </RadioGroup>
+
+<!--    private boolean areClima;     private boolean areIncalzireScaune; -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dotări opționale:"
+        android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/checkClima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/anfabricatie" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
-    <!--    private int capacitateMotor;-->
-    <TextView
+        android:text="Climă bizonă" />
+    <CheckBox
+        android:id="@+id/checkIncalzire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/capacitatemotor" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_marginBottom="12dp"
+        android:text="Scaune încălzite" />
 
-    <!--    private int nrUsi;-->
+<!--    private float ratingStare;-->
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stare / Evaluare generală:"
+        android:textStyle="bold" />
+    <RatingBar
+        android:id="@+id/ratingBarStare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nrusi" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="4.0"
+        android:layout_marginBottom="24dp" />
+
 
     <Button
+        android:id = "@+id/butonSalvare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/salveaza"/>
+        android:layout_gravity="center"
+        android:text="@string/salveaza" />
+
 
 </LinearLayout>
