@@ -1,8 +1,11 @@
 package com.example.lab4_exercitiu;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
-public class Autoturism implements java.io.Serializable {
+public class Autoturism implements Parcelable {
 
     private String denumire;
     private String model;
@@ -14,8 +17,8 @@ public class Autoturism implements java.io.Serializable {
     private float ratingStare;
 
     public Autoturism() {
-        this.denumire = " ";
-        this.model =" ";
+        this.denumire = "fds ";
+        this.model ="fds ";
         this.anFabricate = 2000;
         this.transmisieAutomata = false;
         this.tractiune = "Față";
@@ -38,6 +41,46 @@ public class Autoturism implements java.io.Serializable {
         this.ratingStare = ratingStare;
 
     }
+
+    protected Autoturism(Parcel in) {
+        denumire = in.readString();
+        model = in.readString();
+        anFabricate = in.readInt();
+        transmisieAutomata = in.readByte() != 0;
+        tractiune = in.readString();
+        areClima = in.readByte() != 0;
+        areIncalzireScaune = in.readByte() != 0;
+        ratingStare = in.readFloat();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(denumire);
+        dest.writeString(model);
+        dest.writeInt(anFabricate);
+        dest.writeByte((byte) (transmisieAutomata ? 1 : 0));
+        dest.writeString(tractiune);
+        dest.writeByte((byte) (areClima ? 1 : 0));
+        dest.writeByte((byte) (areIncalzireScaune ? 1 : 0));
+        dest.writeFloat(ratingStare);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Autoturism> CREATOR = new Creator<Autoturism>() {
+        @Override
+        public Autoturism createFromParcel(Parcel in) {
+            return new Autoturism(in);
+        }
+
+        @Override
+        public Autoturism[] newArray(int size) {
+            return new Autoturism[size];
+        }
+    };
 
     @Override
     public String toString() {

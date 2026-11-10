@@ -83,11 +83,6 @@ public class PreluareDate extends AppCompatActivity {
 
         Intent it = new Intent();
 
-//        Bundle bundle = new Bundle();
-//        bundle.putSerializable("auto",autoturism);
-
-//        it.putExtras(bundle);
-
         it.putExtra("auto",autoturism);
         setResult(RESULT_OK,it);
 

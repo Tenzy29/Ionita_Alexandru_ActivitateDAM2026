@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(requestCode == 70 && resultCode == RESULT_OK)
         {
-            autoturism = (Autoturism) data.getSerializableExtra("auto");
+            autoturism = (Autoturism) data.getParcelableExtra("auto");
 
 
             String mesaj = "Salvat: "+"\n"+ autoturism.toString();
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             Intent it2 = new Intent(this,AfisareLista.class);
 
             it2.putExtra("lista",listaAutoturisme);
-            startActivityForResult(it2,70);
+            startActivityForResult(it2,80);
         }
     }
 }

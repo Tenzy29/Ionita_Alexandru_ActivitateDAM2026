@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    private boolean transmisieAutomata;-->
+<!--    private String tractiune;-->
+<!--    private boolean areClima;-->
+<!--    private boolean areIncalzireScaune;-->
+<!--    private float ratingStare;-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        DENUMIRE-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1" />
+
+<!--        MODEL-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2" />
+
+<!--    private int anFabricate;-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3" />
+
+
+<!--        DE CONTINUAT CU CELELALTE ATRIBUTE-->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
